@@ -56,6 +56,7 @@ img {
 
 body {
   font-family: var(--ff-primary);
+  background-color: var(--main-bg);
 }
 .container {
   width: 100vw;
