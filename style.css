@@ -1,0 +1,170 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* Primary */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --ff-primary: "Outfit", sans-serif;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5rem;
+  font-size: 18px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+/* Challenge */
+
+body {
+  font-family: var(--ff-primary);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  padding: 2rem;
+  max-width: 25rem;
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.img-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+.equilibrium-img {
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.color-overlay {
+  background-color: #00fff7;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem;
+  display: none;
+}
+.img-wrapper .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 3rem;
+  display: none;
+}
+.img-wrapper:hover .color-overlay,
+.img-wrapper:hover .view {
+  display: block;
+}
+
+.card-wrapper h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.card-wrapper h2:hover {
+  color: cyan;
+}
+.card-wrapper p {
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+.card-price-time {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+}
+.time img {
+  max-width: 1rem;
+}
+.price img {
+  max-width: 0.7rem;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cyan);
+  width: 50%;
+}
+.time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--soft-blue);
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--soft-blue);
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.card-footer img {
+  width: 2.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.card-footer .name {
+  color: white;
+}
+.card-footer:hover .name {
+  color: var(--cyan);
+}
+.attribution {
+  color: white;
+}
